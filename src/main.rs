@@ -1,3 +1,3 @@
 fn main() {
-    println!("Hello, world!");
+    println!("Note: Run each solution file separately.");
 }
