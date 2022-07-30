@@ -17,12 +17,12 @@ Complexity:
  - Since Part 1 will never search through more than 128 characters, 
  you could say it is of O(1) complexity 
 - Else, it is at most of O(n) complexity, where n is the number of characters
-
+- Assuming Part 2 requires iteratively comparing all the chars,
+then that would be of O(n^2) complexity
 */
 
 // import stuff
 use std::collections::HashSet;
-
 
 // Part 1 - checking using string length + HashSet
 // ------------------------------------------------ 
@@ -51,14 +51,12 @@ fn check_unique_char(input: &str) -> bool {
 // Part 2 - If you couldn't use additional data structures
 // -------------------------------------------------------
 
-// sort the string, then look for repeats
-
-fn check_unique_char_restricted(input: &str) -> bool{
-    println!("still debugging method 2 for {}",input);
-    return true
-}
-
-
+/*  
+I donno what this really means... 
+Best guess, I would just interate through each character in the 
+string and compare to the others. If I sorted this first, I could
+just check neighbours.
+*/
 
 fn main(){
 
@@ -68,9 +66,9 @@ fn main(){
     match input.is_ascii(){
         true => {
             let output_1 = check_unique_char(&input);
-            println!("input '{}' char uniqueness: {} (method 1)",input,output_1);
-            let output_2 = check_unique_char_restricted(&input);
-            println!("input '{}' char uniqueness: {} (method 2)",input,output_2);
+            println!("input '{}' char uniqueness: {}",input,output_1);
+            //let output_2 = check_unique_char_restricted(&input);
+            //println!("input '{}' char uniqueness: {} (method 2)",input,output_2);
         }
         false => {
             println!("input '{}' contains non-ASCII chars. This program only
