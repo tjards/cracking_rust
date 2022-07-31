@@ -2,9 +2,8 @@
 
 Title: Check Permutations 
 
-Description: 
-
-
+Description: Given two strings, write a method to decide if one 
+    a permutation of the other
 
 Considerations:
 

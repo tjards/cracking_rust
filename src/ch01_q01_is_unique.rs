@@ -13,7 +13,7 @@ Considerations:
 - HashSet is good for when you never want for more than one of something
 
 Complexity:
- - Since Part 1 will never search through more than 128 characters, 
+- Since Part 1 will never search through more than 128 characters, 
  you could say it is of O(1) complexity 
 - Else, it is at most of O(n) complexity, where n is the number of characters
 - Assuming Part 2 requires iteratively comparing all the chars,
