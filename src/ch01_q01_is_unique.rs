@@ -32,7 +32,7 @@ use std::collections::HashSet;
 // this function accepts the string, returns boolean
 fn check_unique_char(input: &str) -> bool {
     
-    // Since ASCII only has 128 char, a longer string must repeat chars
+    // since ASCII only has 128 char, a longer string must repeat chars
     if input.len() > 128 {
         return false;
     } else {
