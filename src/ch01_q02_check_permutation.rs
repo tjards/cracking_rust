@@ -8,27 +8,19 @@ Description: Given two strings, write a method to decide if one
 Considerations:
 - what does perumutation mean? Assume = anagram
 - to be permutations of eachother, strings have to be the same length
-- assume sub-permutations are not in scope for the question
+- assume sub-permutations (i.e. dog and goddy) are not in scope for the question
 - ignore whitespace
-- assume not cas-sensitive
+- assume not case-sensitive, so we convert all to lowercase
 - if they are permutations, a sorted set should be equivalent
-- consider randomness to reduce time in checking (?)
 
 Complexity:
 - the sorting is of complexity O(n*Log(n))
 - checking lengths first would be quick
 
-Issues remaining:
-- the .trim() method only removes whitespace from ends but I want 
-    remove all whitespace (even between): start from line 66 below.
-    may have to write something more custom.
-
-
 Author: tjards
 
 */
 
-// import stuff
 //use std::vec::Vec;
 
 fn check_permutation(input1: &str, input2: &str) -> bool{
@@ -49,7 +41,6 @@ fn check_permutation(input1: &str, input2: &str) -> bool{
             println!("Strings dont have all the same chars .");
             return false;
         }
-        //println!("{:?},{:?}",vec1, vec2);
     }
     true
 
@@ -58,19 +49,22 @@ fn check_permutation(input1: &str, input2: &str) -> bool{
 fn main(){
 
     // define the strings
-    let input1 = String::from("he llorustyworld");
-    let input2 = String::from("rhusetylwlorlod");
+    let mut input1 = String::from("he lLo Rustyworld");
+    let mut input2 = String::from("rhusetylwlorlod");
 
-    println!("Inputs: {},{}",input1, input2);
+    println!("Note: program is not case-sensitive and will automatically remove whitespace");
+    println!("Inputs (raw): {},{}",input1, input2);
 
-    // remove whitespace (not working yet, as only trims ends)
-    let input1_ = input1.trim();
-    let input2_ = input2.trim();
+    // remove whitespace and lowercase everything
+    input1.retain(|c| !c.is_whitespace());
+    input1.make_ascii_lowercase();
+    input2.retain(|c| !c.is_whitespace());
+    input2.make_ascii_lowercase();
     
-    println!("Inputs (trimmed): {},{}",input1_, input2_);
+    println!("Inputs (cleaned): {},{}",input1, input2);
 
     // run check
-    let output = check_permutation(&input1_,&input2_);
-    println!("inputs '{}, {}' permutationness (excluding whitespace) {}:",input1,input2,output);
-      
+    let output = check_permutation(&input1,&input2);
+    println!("inputs '{}, {}' permutationness (excluding whitespace): {}",input1,input2,output);
+
 }
