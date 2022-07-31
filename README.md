@@ -5,6 +5,6 @@ This repository is my attempt to improve my Rust programming skills by working t
 Progress so far:
 
 ## Chapter 1: Arrays and Strings
-[Is Unique](https://github.com/tjards/cracking_rust/blob/master/src/ch01_q01_is_unique.rs)
+Question 01: [Is Unique](https://github.com/tjards/cracking_rust/blob/master/src/ch01_q01_is_unique.rs)
 
 
