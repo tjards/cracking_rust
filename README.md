@@ -4,6 +4,7 @@ This repository is my attempt to improve my Rust programming skills by working t
 
 Some great Rust tutorials posted by @brndnmtthws [here](https://github.com/brndnmtthws/cracking-the-coding-interview-rust).
 
+Posting publicly on GitHub so others can provide advice and recommendations for improving my approach to these problems.
 
 Progress so far:
 
