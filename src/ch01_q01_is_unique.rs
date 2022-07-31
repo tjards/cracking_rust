@@ -3,7 +3,6 @@
 Title: Is Unique 
 
 Description: 
-
 Part 1: Determine if a string has all unique characters. 
 Part 2: What if you cannot use additional data structures?
 
@@ -19,6 +18,9 @@ Complexity:
 - Else, it is at most of O(n) complexity, where n is the number of characters
 - Assuming Part 2 requires iteratively comparing all the chars,
 then that would be of O(n^2) complexity
+
+Author: tjards
+
 */
 
 // import stuff
