@@ -9,5 +9,6 @@ Progress so far:
 
 ## Chapter 1: Arrays and Strings
 Question 01: [Is Unique](https://github.com/tjards/cracking_rust/blob/master/src/ch01_q01_is_unique.rs)
+
 Question 02: [Check Permutation](https://github.com/tjards/cracking_rust/blob/master/src/ch01_q02_check_permutation.rs)
 
